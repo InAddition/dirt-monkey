@@ -1,0 +1,78 @@
+.wysiwyg {
+	h1, h2, h3, h4, h5, h6 {
+		color: white;
+		margin-top: 0;
+		line-height: 1;
+	}
+	h1, h2 {
+		font-size: $font-size-large;
+	}
+	h1 {
+		font-size: $font-size-xl;
+	}
+	h2 {
+		font-size: $font-size-large;
+		margin-bottom: em(5);
+	}
+	h3 {
+		font-size: em(24);
+		margin-bottom: em(5);
+	}
+	h4, h5, h6 {
+		font-size: $font-size-base;
+	}
+	a {
+		transition: color .3s;
+		color: $color-primary;
+		&:hover {
+			color: $color-secondary;
+		}
+	}
+	h3, h4 {
+
+		font-weight: $font-regular;
+	}
+	h5, h6 {
+
+	}
+	p, ul {
+		font-size: em(20);
+		margin-bottom: em(40);
+		color: white;
+	}
+	strong, b {
+		font-weight: $font-bold;
+	}
+	img , iframe {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin-bottom: em(40);
+	}
+	@media (max-width: $bp-laptop) {
+		font-size: 80%;
+	}
+	@media (max-width: $bp-mobile) {
+		font-size: 70%;
+	}
+}
+.bio-headline {
+	font-size: $font-size-large;
+	margin-bottom: em(20);
+	color: white;
+	font-weight: $font-bold;
+	line-height: 1;
+	@media (max-width: $bp-tablet) {
+		font-size: $font-size-medium-large;
+	}
+}
+.bio-copy {
+	font-size: $font-size-medium;
+	color: white;
+	font-weight: $font-regular;
+	line-height: 1.2;
+	margin-bottom: em(20);
+	@media (max-width: $bp-tablet) {
+		font-size: $font-size-base;
+	}
+}

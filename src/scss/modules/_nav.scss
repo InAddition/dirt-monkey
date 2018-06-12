@@ -1,0 +1,256 @@
+nav {
+	position: fixed;
+	width: 100%;
+	height: em(55);
+	z-index: 9998;
+	background-color: $black;
+}
+.logo {
+	position: absolute;
+	top: em(25);
+	left: em(25);
+	display: block;
+	width: em(240);
+	z-index: 2;
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	@media (max-width: $bp-tablet) {
+		font-size: 80%;
+	}
+}
+
+/********************************************
+Nav Menu
+*********************************************/
+
+.nav-menu {
+	display: flex;
+	align-items: flex-end;
+	margin: 0;
+	padding-right: 35px;
+	height: 100%;
+	width: 100%;
+	@media (max-width: $bp-tablet) {
+	    position: absolute;
+	    background: $color-primary;
+	    display: block;
+	    top: em(55);
+	    transform: translateX(101%);
+	    transition: transform .3s 0s, visibility 0s .3s, width 0s .3s;
+	    visibility: hidden;
+	    width: 0;
+	    right: 0;
+	    padding-right: 0;
+	    height: auto;
+	}
+}
+.js-nav-open .nav-menu {
+	@media (max-width: $bp-tablet) {
+		transform: translateX(0);
+		transition: transform .3s 0s, visibility 0s 0s, width 0s 0s;
+		visibility: visible;
+		width: 100%;
+		left: 0;
+		right: auto;
+	}
+}
+.nav-links {
+	font-size: em(16);
+	margin: 0;
+	padding-left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: 100%;
+	width: 100%;
+	li {
+		list-style: none;
+		display: flex;
+		height: 100%;
+		align-items: center;
+		transition: background .3s;
+		&:last-of-type {
+			a {
+				padding-right: 0;
+			}
+		}
+	}
+	a {
+		text-decoration: none;
+		padding: 0 em(15);
+		color: white;
+		letter-spacing: 0.025em;
+		text-transform: uppercase;
+		transition: color .3s;
+		position: relative;
+		display: flex;
+		height: 100%;
+		align-items: center;
+		&:after {
+			height: 20px;
+			width: 60px;
+			background: $color-secondary;
+			display: block;
+			transition: transform .3s, visibility 0s .3s;
+			content: '';
+			position: absolute;
+			top: -15px;
+			right: 0;
+			left: 0;
+			transform: scaleX(0);
+			margin: auto;
+			visibility: hidden;
+		}
+		&:hover {
+			color: $color-secondary;
+
+			&:after {
+				visibility: visible;
+				transform: scaleX(1);
+				transition: transform .3s, visibility 0s 0s;
+			}
+		}
+	}
+	@media (max-width: $bp-tablet) {
+		margin-top: 0;
+		margin-bottom: 0;
+		display: block;
+		margin-right: 0;
+		height: auto;
+		li {
+			display: block;
+			height: auto;
+			padding: em(15) em(30);
+			border-top: solid 1px rgba(255,255,255,0.1);
+			a {
+				display: block;
+				height: auto;
+				transition: all .3s;
+				text-align: right;
+				&:after {
+					display: none;
+				}
+			}
+			&:first-of-type {
+				border-top: 0;
+			}
+			&:last-of-type {
+				 a {
+				 	padding: 0 em(15);
+				 }
+			}
+			&:hover {
+				background: $color-primary-dark;
+				a {
+					color: white;
+				}
+			}
+		}
+	}
+}
+.page-Tour .nav-tour a,
+.page-Music .nav-music a,
+.page-News .nav-news a,
+.page-Media .nav-media a,
+.page-About .nav-about a,
+.page-Videos .nav-videos a,
+.page-Photos .nav-photos a,
+.page-post .nav-news a {
+	color: $color-primary;
+	&:after {
+		visibility: visible;
+		transform: scaleX(1);
+		transition: transform .3s, visibility 0s 0s;
+	}
+}
+.nav-divider {
+	width: em(12);
+	height: em(12);
+	background: url(../images/icon-nav-divider.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	@media (max-width: $bp-tablet) {
+		display: none !important;
+	}
+}
+
+
+
+
+/********************************************
+Hamburger
+*********************************************/
+
+.hamburger {
+	display: none;
+	position: absolute;
+	top: em(30);
+	bottom: em(30);
+	right: 0;
+	margin: auto;
+	z-index: 4;
+	padding-left: 15px;
+	border-left: solid 1px rgba(0,0,0,0.5);
+	@media (max-width: $bp-tablet) {
+		display: flex;
+		flex-grow: 1;
+		align-items: center;
+		justify-content: flex-end;
+		padding-right: em(20);
+	}
+}
+.hamburger-icon {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	span {
+		width: 34px;
+		height: 4px;
+		background-color: white;
+		position: relative;
+		display: block;
+		&:before {
+			@extend %pseudos;
+			height: 4px;
+			top: -7px;
+			width: 100%;
+			right: 0;
+			background-color: white;
+			transition: all .2s;
+		}
+		&:after {
+			@extend %pseudos;
+			height: 4px;
+			bottom: -7px;
+			width: 85%;
+			right: 0;
+			background-color: white;
+			transition: all .2s;
+		}
+		.js-nav-open & {
+			background-color: $color-primary;
+			width: 55%;
+			&:before {
+				top: -3px;
+    			width: 60%;
+    			right: -3px;
+			    transform: rotate(45deg);
+			    background-color: $color-primary;
+			}
+			&:after {
+				bottom: -3px;
+    			width: 60%;
+    			right: -3px;
+			    transform: rotate(-45deg);
+			    background-color: $color-primary;
+			}
+		}
+	}
+}

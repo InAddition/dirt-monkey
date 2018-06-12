@@ -1,0 +1,80 @@
+/**********************
+Breakpoints 
+***********************/
+
+
+$bp-xl: 1824px;
+$bp-large: 1300px;
+$bp-desktop: 1150px;
+$bp-laptop: 1000px;
+$bp-tablet: 900px;
+$bp-mobile: 650px;
+$bp-small: 550px;
+$bp-xs: 320px;
+
+
+/**********************
+Colors
+***********************/
+
+$pink: #f71b59;
+$light-pink: #f955aa;
+$dark-pink: #d9065a;
+$blue: #00a5d4;
+$light-blue: #37d2fe;
+$dark-blue: #00a5d4;
+$black: rgba(0,0,0,0.7);
+$light-black: rgba(0,0,0,0.15);
+
+/**********************
+Color Usage
+***********************/
+
+$color-primary: $blue;
+$color-primary-light: $light-blue;
+$color-primary-dark: $dark-blue;
+$color-secondary: $pink;
+$color-secondary-light: $light-pink;
+$color-secondary-dark: $dark-pink;
+$color-background: $black;
+$color-background-light: $light-black;
+$accent: $pink;
+$primary: $blue;
+$copy-grey: black;
+$light-grey: white;
+
+/**********************
+Font Family
+***********************/
+
+$font-family: 'Saira Condensed', sans-serif;
+
+/**********************
+Font Weights
+***********************/
+
+$font-regular: 400;
+$font-bold: 700;
+
+/**********************
+Font Size
+***********************/
+
+$font-size-micro: 14px;
+$font-size-small: 16px;
+$font-size-base: em(20);
+$font-size-medium: em(24);
+$font-size-medium-large: em(30);
+$font-size-large: em(55);
+$font-size-xl: em(65);
+$font-small: $font-size-small; 
+$font-copy: $font-size-base;
+$font-default: $font-size-medium;
+$font-medium: $font-size-medium;
+
+/**********************
+Letter Spacing
+***********************/
+
+$letter-spacing-wide: em(.75);
+$letter-spacing-x-wide: em(1.5);

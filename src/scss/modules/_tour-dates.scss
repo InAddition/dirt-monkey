@@ -1,0 +1,8 @@
+.tour-dates {
+	font-size: $font-size-base;
+	margin-top: -40px;
+	@media (max-width: $bp-tablet) {
+		margin-top: -30px;
+		font-size: em(18);
+	}
+}

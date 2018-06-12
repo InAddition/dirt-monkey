@@ -1,0 +1,132 @@
+.single-product-container {
+
+}
+.single-product-info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: em(50);
+	margin-bottom: em(50);
+	@media (max-width: $bp-laptop) {
+		margin-top: em(30);
+	}
+	@media (max-width: $bp-mobile) {
+		flex-wrap: wrap;
+	}
+}
+.single-product-gallery {
+	width: 40%;
+	@media (max-width: $bp-mobile) {
+		width: 100%;
+		order: 2;
+		margin-top: 30px;
+	}
+}
+.single-product-feature-photo {
+	width: 100%;
+	display: block;
+	height: auto;
+	border: solid 1px $light-grey;
+}
+.single-product-details {
+	width: 45%;
+	text-decoration: left;
+	h1 {
+		color: white;
+		margin-bottom: 20px;
+		line-height: 1;
+	}
+	h2 {
+		color: $primary;
+		margin-bottom: 0;
+		font-size: em(28);
+	}
+	h3 span {
+		color: $primary;
+	}
+	.links {
+		font-family: $font-family;
+	}
+	input.qty {
+		width: 40px;
+		height: 40px;
+		text-align: center;
+	}
+	.add-to-cart .variations {
+		margin-bottom: 30px;
+	}
+	label {
+		position: relative !important;
+		overflow: auto;
+		height: auto;
+		width: auto;
+		padding-right: 20px;
+		color: white;
+		clip-path: inset(0);
+		font-size: em(20);
+	}
+	@media (max-width: $bp-laptop) {
+		form {
+			height: em(50); 
+			padding: 10px;
+		}
+	}
+	@media (max-width: $bp-mobile) {
+		width: 100%;
+		order: 1;
+	}
+}
+.submit-btn {
+	font-family: $font-family;
+	color: white;
+	padding: 0 em(30);
+	font-weight: $font-bold;
+	display: inline-block;
+	outline: none;
+	border: 0;
+	@media (max-width: $bp-laptop) {
+		font-size: 110%;
+	}
+}
+
+.quantity {
+	height: 100%;
+}
+.woocommerce .quantity .qty {
+	height: 100%;
+	margin-right: 20px;
+}
+.product-thumbs {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+	a {
+		width: 19%;
+		margin: 1%;
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+}
+.single-product-excerpt {
+	margin-bottom: 30px;
+	color: white;
+	font-size: em(20);
+}
+.single-product-description {
+	background: lighten(#f4f4f4, 1%);
+	padding: em(40);
+	margin-top: 50px;
+	@media (max-width: $bp-laptop) {
+		padding: em(30);
+		margin-top: 40px;
+	}
+	@media (max-width: $bp-mobile) {
+		padding: em(20);
+		margin-top: 30px;
+	}
+
+}

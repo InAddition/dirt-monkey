@@ -1,0 +1,26 @@
+.page-title {
+	position: relative;
+	color: white;
+	text-transform: uppercase;
+	font-size: em(42);
+	font-weight: $font-regular;
+	margin-bottom: 60px;
+	&:before {
+		display: inline-block;
+		padding-right: 10px;
+		height: 30px;
+		width: 30px;
+		content: '';
+		background: url(../images/icon-page-title.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	@media (max-width: $bp-tablet) {
+		margin-bottom: 40px;
+		font-size: em(30);
+		&:before {
+			height: 20px;
+			width: 20px;
+		}
+	}
+}
