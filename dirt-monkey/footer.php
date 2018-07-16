@@ -5,19 +5,8 @@
 				<div class="footer-tour-date-title">
 					next up
 				</div>
-				<div class="footer-tour-date-info" id="sk-footer">
-					<div class="footer-tour-date">
-						<h3>
-							<span>June</span>
-							15
-						</h3>
-					</div>
-					<div class="footer-tour-date-event">
-						<h2>
-							<span>East Nashville, TN</span>
-							The Basement East
-						</h2>
-					</div>
+				<div class="footer-tour-date-info js-footer-tour-date-info" id="sk-footer">
+					
 				</div>
 			</div>
 			<ul class="nav-social">

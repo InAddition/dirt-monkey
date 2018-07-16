@@ -7,6 +7,11 @@
 		padding-top: 55px;
 	}
 }
+.page-wrapper {
+	@media (max-width: $bp-mobile) {
+		padding-bottom: 60px;
+	}
+}
 .home-wrapper {
 	display: flex;
 	flex-direction: column;

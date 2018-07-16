@@ -30,7 +30,7 @@
 	</head>
 	<body class="page-<?php the_title() ?> ">	
 	<nav>
-		<a href="<?php bloginfo('url'); ?>" class="logo">
+		<a href="<?php bloginfo('url'); ?>/home" class="logo">
 			<img src="<?php bloginfo('template_url'); ?>/images/logo-main.png" alt="<?php the_title(); ?>">
 		</a>
 		<div class="nav-menu">
@@ -52,7 +52,7 @@
 						</li>
 						<li class="nav-divider"></li>
 						<li class="nav-shop">
-							<a href="<?php bloginfo('url'); ?>/shop" target="_blank">Shop</a>
+							<a href="<?php bloginfo('url'); ?>/shop">Shop</a>
 						</li>
 						<li class="nav-divider"></li>
 						<li class="nav-about">

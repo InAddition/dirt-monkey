@@ -7,7 +7,7 @@
 	margin-top: em(50);
 	margin-bottom: em(50);
 	@media (max-width: $bp-laptop) {
-		margin-top: em(30);
+		margin-top: 0;
 	}
 	@media (max-width: $bp-mobile) {
 		flex-wrap: wrap;
@@ -17,8 +17,6 @@
 	width: 40%;
 	@media (max-width: $bp-mobile) {
 		width: 100%;
-		order: 2;
-		margin-top: 30px;
 	}
 }
 .single-product-feature-photo {
@@ -72,6 +70,8 @@
 	}
 	@media (max-width: $bp-mobile) {
 		width: 100%;
+		margin-top: 30px;
+		font-size: 110%;
 		order: 1;
 	}
 }

@@ -30,7 +30,7 @@
 				    				<div class="btn">
 				    					Buy Now
 				    				</div>
-				    				<img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>" >
+				    				<img src="<?php  echo $image; ?>" data-id="<?php echo $loop->post->ID; ?>" >
 				    			</div>
 			    				<div class="product-info">
 			    					<h2><?php the_title(); ?></h2>

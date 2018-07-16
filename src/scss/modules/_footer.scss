@@ -47,7 +47,7 @@ Nav Social
 			}
 			&:hover {
 				svg {
-					path {
+					path, circle {
 						fill: $color-secondary;
 					}
 				}
@@ -81,13 +81,15 @@ Nav Social
 		right: auto;
 		margin: 0 auto;
 		text-align: center;
+		width: 100%;
 	}
 }
 .footer-tour-date-container {
 	position: absolute;
 	left: 25px;
 	bottom:0;
-	width: 300px;
+	min-width: 300px;
+	z-index: 4;
 	@media (max-width: $bp-tablet) {
 		position: relative;
 		z-index: 3;
@@ -95,6 +97,7 @@ Nav Social
 		left: auto;
 		bottom: 0;
 		margin: 0 auto;
+		width: 100%;
 	}
 }
 .footer-tour-date-info {

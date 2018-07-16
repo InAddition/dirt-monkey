@@ -35,7 +35,7 @@ hamburger.click(function(e){
 
 //////// Venobox
 
-// $('.venobox').venobox(); 
+$('.venobox').venobox(); 
 
 //////// Sticky Footer
 
@@ -145,6 +145,79 @@ hamburger.click(function(e){
 //    }
 // });
 
+
+
+
+
+  var url = 'https://api.songkick.com/api/3.0/artists/4213166/calendar.json?apikey=01h7P6Mjgl0ZQeTr';
+  $.ajax({
+     url: url,
+     dataType: 'json',
+     success: function(data){
+  	   $.each(data, function(key, val) {
+  	   	var dmevent = data.resultsPage.results.event[0];
+  	   	
+  			var eventContainer = $(".js-footer-tour-date-info");
+  			var d = new Date(dmevent.start.date);
+        var c = dmevent.location.city;
+        var v = dmevent.venue.displayName;
+  			var month = new Array();
+        month[0] = "Jan";
+        month[1] = "Feb";
+        month[2] = "Mar";
+        month[3] = "Apr";
+        month[4] = "May";
+        month[5] = "Jun";
+        month[6] = "Jul";
+        month[7] = "Aug";
+        month[8] = "Sep";
+        month[9] = "Oct";
+        month[10] = "Nov";
+        month[11] = "Dec";
+        var month = month[d.getUTCMonth()];
+        var day = d.getUTCDate();
+        // var month = d.getUTCMonth();
+        var date = new Date(d);
+        console.log(month);
+  			// var footerEvent = 
+  			// 	"<div class='footer-tour-date'>" +
+     //      '<h3>' +
+  			// 		"<a href='" + val.short_url + "' class='event-link js-media-trigger'>" +
+  			// 			"<img src='" + val.flyer_url + "' class='event-image'>" +
+  			// 			"<div class='event-info'>" +
+  			// 				"<h3 class='event-title'>" + val.name + "</h3>" +
+  			// 				"<div class='event-time'>" +
+  			// 					"<span class='event-date'>" + formattedDate + "</span><br/>" +
+  			// 					"<span class='event-start'>" + formattedTime + "</span>" +
+  			// 					"<span class='event-end'>" + "&nbsp;" +  "- " + formattedETime + "</span>" +
+  			// 				"</div>" +
+  			// 			"</div>" +
+  			// 		"</a>" +
+  			// 	"</li>";
+
+        var footerEvent = 
+                 '<div class="footer-tour-date">' +
+                  '<h3>' + 
+                    '<span>'  +  month +
+                    '</span>' + day +
+                  '</h3>' +
+                 '</div>' +
+                 '<div class="footer-tour-date-event">' +
+                 '<h2>' +
+                    '<span>' + c + '</span>' +
+                   v +
+                  '</h2>' +
+                 '</div>';
+
+  			eventContainer.append(footerEvent);
+
+
+  	   });
+     },
+     error: function(err){
+       console.log(err)
+     }
+  });
 
 /*===============================================
 IE 10

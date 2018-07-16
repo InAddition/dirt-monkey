@@ -12,10 +12,14 @@ nav {
 	display: block;
 	width: em(240);
 	z-index: 2;
+	transition: all .3s;
 	img {
 		width: 100%;
 		height: auto;
 		display: block;
+	}
+	&:hover {
+		transform: scale(0.9);
 	}
 	@media (max-width: $bp-tablet) {
 		font-size: 80%;
@@ -130,6 +134,7 @@ Nav Menu
 				height: auto;
 				transition: all .3s;
 				text-align: right;
+				justify-content: flex-end;
 				&:after {
 					display: none;
 				}
@@ -151,19 +156,21 @@ Nav Menu
 		}
 	}
 }
-.page-Tour .nav-tour a,
-.page-Music .nav-music a,
-.page-News .nav-news a,
-.page-Media .nav-media a,
-.page-About .nav-about a,
-.page-Videos .nav-videos a,
-.page-Photos .nav-photos a,
-.page-post .nav-news a {
-	color: $color-primary;
-	&:after {
-		visibility: visible;
-		transform: scaleX(1);
-		transition: transform .3s, visibility 0s 0s;
+@media (min-width: $bp-tablet) {
+	.page-Tour .nav-tour a,
+	.page-Music .nav-music a,
+	.page-News .nav-news a,
+	.page-Media .nav-media a,
+	.page-About .nav-about a,
+	.page-Videos .nav-videos a,
+	.page-Photos .nav-photos a,
+	.page-post .nav-news a {
+		color: $color-primary;
+		&:after {
+			visibility: visible;
+			transform: scaleX(1);
+			transition: transform .3s, visibility 0s 0s;
+		}
 	}
 }
 .nav-divider {
