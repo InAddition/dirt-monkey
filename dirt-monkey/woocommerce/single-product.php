@@ -17,7 +17,7 @@ $attributes = $product->get_variation_attributes();
 $attribute_keys = array_keys( $attributes );
 ?>
 <?php get_header(); ?>
-<div class="wrapper">
+<div class="wrapper page-wrapper">
 	<div class="container">
 		<div class="content">
 			<h2 class="page-title">

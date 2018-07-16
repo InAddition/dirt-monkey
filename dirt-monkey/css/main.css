@@ -2486,6 +2486,9 @@ p.cart-empty {
         -ms-flex-order: 1;
             order: 1;
   }
+  .single-product-details h1 {
+    height: 2em;
+  }
 }
 
 .submit-btn {
